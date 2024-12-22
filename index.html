@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>countryapi - API Countries</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css" />
+</head>
+
+<body>
+  <div id="map"></div>
+  <div class="popup" id="popup">
+    <div><span class="title">countryapi</span><span id="expand" style="text-align:right;">&#9660;</span></div>
+    <div class="content" id="content">
+      <p>Log in on <a href="https://countryapi.io/">https://countryapi.io/</a>, create your API key, insert the
+        key
+        here and submit to get the
+        countries.</p>
+      <p><label for="apiKey">Input your API key:</label><input type="text" id="apiKey" /></p>
+      <p><button id="submit" class="submit">Submit</button></p>
+      <p>Watch out: You have 250 requests max.</p>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
